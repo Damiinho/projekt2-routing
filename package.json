@@ -1,16 +1,19 @@
-{
+{ 
+  "homepage": "https://damiinho.github.io/projekt2-routing",
   "name": "projekt2",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "gh-pages": "^5.0.0",
     "react": "^16.8.1",
     "react-dom": "^16.8.1",
     "react-router-dom": "^4.3.1",
     "react-scripts": "2.1.4"
   },
-  "scripts": {
-    "start": "react-scripts --openssl-legacy-provider start",
-    "build": "react-scripts build",
+  "scripts": {    "predeploy": "npm run build",
+  "deploy": "gh-pages -d build",
+  "start": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts start",
+  "build": "SET NODE_OPTIONS=--openssl-legacy-provider && react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
